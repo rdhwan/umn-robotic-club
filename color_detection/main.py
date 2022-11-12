@@ -10,12 +10,12 @@ RED_HIGH = [179, 255, 255]
 GREEN_LOW = [36, 88, 83]
 GREEN_HIGH = [68, 255, 255]
 
-BLUE_LOW = [93, 60, 118]
-BLUE_HIGH = [144, 255, 255]
+BLUE_LOW = [95, 66, 109]
+BLUE_HIGH = [130, 255, 255]
 
 
 # detect color on single frame
-frame = cv2.imread("img/sample_red.jpg")
+frame = cv2.imread("img/sample_blue.jpg")
 
 start = time.perf_counter()
 processed = detector.detect_rgb(
