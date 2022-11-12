@@ -3,7 +3,7 @@ import numpy as np
 
 
 def nothing(x):
-    pass
+    ...
 
 
 # Load image
@@ -30,7 +30,7 @@ cv2.setTrackbarPos("VMax", "image", 255)
 hMin = sMin = vMin = hMax = sMax = vMax = 0
 phMin = psMin = pvMin = phMax = psMax = pvMax = 0
 
-while 1:
+while True:
     # Get current positions of all trackbars
     hMin = cv2.getTrackbarPos("HMin", "image")
     sMin = cv2.getTrackbarPos("SMin", "image")
@@ -57,10 +57,7 @@ while 1:
         | (psMax != sMax)
         | (pvMax != vMax)
     ):
-        print(
-            "(hMin = %d , sMin = %d, vMin = %d), (hMax = %d , sMax = %d, vMax = %d)"
-            % (hMin, sMin, vMin, hMax, sMax, vMax)
-        )
+        print(f"low = [{hMin}, {sMin}, {vMin}], high = [{hMax}, {sMax}, {vMax}]")
         phMin = hMin
         psMin = sMin
         pvMin = vMin
